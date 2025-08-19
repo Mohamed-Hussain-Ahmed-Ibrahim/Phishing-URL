@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    background: url('lo.jpg') no-repeat;
+    width: 200px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+}
+header
+{
+    top: 0;
+    left: 0;
+    width: 1360px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.salah h1{
+    font-size: 4em;
+    color:green;
+    font-weight: bolder;
+    margin-left: 550px;
+
+
+}
+.textareaa{
+    font-size: 1.6em;
+    color:black;
+    margin-left: 500px;
+
+
+}
+.sendd{
+    
+    margin-left: 645px;
+}
+.sen{ 
+    
+    background:50px 50px blue;
+    font-size: 1.5em;
+    padding: 6px;
+    font-style: italic;
+    font-weight: bolder;
+    color: white;
+    border: 3px solid whitesmoke;
+    margin-left: 10px;
+    text-decoration: none;
+    border-radius: 14px;   
+}
+.sendd a:hover{
+    background: rgb(186, 14, 14);
+    color: white;
+
+}
+
+.rare{
+    background:50px 50px blue;
+    font-size: 1.3em;
+    font-weight: bolder;
+    color: white;
+    border: 3px solid white;
+    margin-left: 600px;
+    
+
+}
+
+
+.welcome
+{
+    font-size: 2.2em;
+    color: forestgreen;
+    
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:green;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    transform: scaleX(1);
+    color: black;
+
+}
+.navigation .btnnn{
+    position: relative;
+    width:100px;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    background: rgb(14, 162, 207);
+    padding-right: 130px;
+    border: 2px solid white;
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500px;
+    transition: .5s;
+    border-radius: 15px;
+
+}
+.navigation .btnnn a{
+    color: whitesmoke;
+}
+.navigation .btnnn:hover {
+    background: rgb(189, 4, 4);
+    color: rgb(125, 67, 67);
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.btnn{
+    width: 280px;
+    height: 45px;
+    background: rgb(173, 56, 14);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <h2 class="welcome">Phishing</h2>
+        <nav class="navigation">
+            <a href="{% url 'home' %}" id="reload-link">Home</a>
+            <a href="{% url 'check_site' %}" id="reload-link">CheckSite</a>
+            <a href="{% url 'black_list' %}" id="reload-link">BlackList</a> 
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" id="reload-link">Profile</a>
+                <a href="{% url 'feedback' %}" id="reload-link">FeedBack</a> 
+                <p>Welcome, {{ user.first_name }}!</p>
+            {% else %}
+                <button class="btnnn"><a href="{% url 'register' %}" id="reload-link">signup</a></button>
+            {% endif %}
+        </nav>
+        
+    </header>
+    
+    <div class="wrapper2">
+        <span class="icon-close"><ion-icon name="close-circle-outline"></ion-icon></span>
+    
+        <div class="box register">
+            <h2>Registration</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input">
+                    <label><b>Name</b></label>
+                    <input type="text" name="name" required placeholder="">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                </div>
+                <div class="input">
+                    <label><b>Email</b></label>
+                    <input type="email" name="email" required placeholder="">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                </div>
+                <div class="input">
+                    <label><b>Password</b></label>
+                    <input type="password" name="password1" required placeholder="">
+                    <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                </div>
+                <div class="input">
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" name="password2" required placeholder="">
+                    <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox" name="agree">I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="btnn">Register</button>
+                <div class="register">
+                    <p>Already have an account? <a href="{% url 'login' %}" class="login_link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction2</title>
+</head>
+<style>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+    
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</style>
+<body>
+    <center>
+        <h1>Prediction:</h1>
+    </center>
+    <table>
+        <header>
+            <th>Links</th>
+            <th>predictions</th>
+        </header>
+        
+        <tbody>
+           
+                <tr>
+                    <td>{{ links.0 }}</td>
+                    <td>{{ predictions.0 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ links.1 }}</td>
+                    <td>{{ predictions.1 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ links.2 }}</td>
+                    <td>{{ predictions.2 }}</td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+</html>

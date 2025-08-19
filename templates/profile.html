@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account Settings</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<style>
+	*,
+	*:before,
+	*:after{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	body{
+		background-color: #080710;
+		color: #fff;
+		font-family: 'Poppins', sans-serif;
+	}
+	
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	
+	.form-container{
+		width: 400px;
+		position: relative;
+		backdrop-filter: blur(10px);
+		border-radius: 20px;
+		padding: 50px;
+		box-shadow: 0px 15px 20px rgba(8,7,16,.6);
+	}
+	
+	.form-container:before {
+		content: "";
+		position: absolute;
+		top: -50px;
+		left: -50px;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background: linear-gradient(#1845AD, #23A2F6);
+		z-index: -1;
+	}
+	
+	.form-container:after {
+		content: "";
+		position: absolute;
+		bottom: -50px;
+		right: -50px;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background: linear-gradient(to right, #FF512F, #F09819);
+		z-index: -1;
+	}
+	
+	.form-container form h3 {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 500;
+		margin-bottom: 40px;
+	}
+	
+	.form-container label {
+		display: block;
+		margin-top: 30px;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	
+	.form-container input[type="text"],
+	.form-container input[type="email"],
+	.form-container input[type="password"] {
+		width: 100%;
+		height: 50px;
+		background-color: rgba(255, 255, 255, 0.07);
+		border-radius: 3px;
+		padding: 0 10px;
+		margin-top: 8px;
+		font-size: 14px;
+		font-weight: 300;
+		color: #fff;
+		border: none;
+		outline: none;
+	}
+	
+	.form-container input[type="text"]::placeholder,
+	.form-container input[type="email"]::placeholder,
+	.form-container input[type="password"]::placeholder {
+		color: #e5e5e5;
+	}
+	
+	.form-container button {
+		background-color: #ffffff;
+		color: #080710;
+		padding: 15px 0;
+		font-size: 18px;
+		font-weight: 600;
+		border-radius: 5px;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+		margin-top: 50px;
+		width: 100%;
+		border: none;
+		outline: none;
+	}
+	
+	.form-container button:hover {
+		background-color: rgba(255, 255, 255, 0.9);
+		color: #080710;
+	}
+	
+	.form-container .social {
+		margin-top: 30px;
+		display: flex;
+	}
+	
+	.form-container .social div {
+		background: red;
+		width: 150px;
+		border-radius: 3px;
+		padding: 5px 10px 10px 5px;
+		background-color: rgba(255, 255, 255, 0.27);
+		color: #eaf0fb;
+		text-align: center;
+		margin-right: 15px;
+		transition: background-color 0.2s ease-in-out;
+		}
+		
+		.form-container .social div:hover {
+		background-color: rgba(255,255,255,0.47);
+		}
+		
+		.form-container .social .fb {
+		margin-right: 0;
+		margin-left: 25px;
+		}
+		
+		.form-container .social i {
+		margin-right: 4px;
+		color: #eaf0fb;
+		}
+		
+		@media (max-width: 500px) {
+		.form-container {
+		padding: 40px 20px;
+		}
+		.form-container form h3 {
+		font-size: 28px;
+		line-height: 36px;
+		margin-bottom: 20px;
+		}
+		.form-container label {
+		margin-top: 20px;
+		font-size: 14px;
+		}
+		.form-container input[type="text"],
+		.form-container input[type="email"],
+		.form-container input[type="password"] {
+		height: 40px;
+		font-size: 12px;
+		}
+		.form-container button {
+		margin-top: 40px;
+		font-size: 16px;
+		padding: 12px 0;
+		}
+		.form-container .social div {
+		font-size: 12px;
+		padding: 3px 5px 5px 3px;
+		margin-right: 10px;
+		}
+		}
+		
+		
+</style>
+<body>
+
+      <header>
+        <h2 class="welcome">Phishing</h2>
+        <nav class="navigation">
+			<a href="{% url 'home' %}" id="reload-link">Home</a>
+			<a href="{% url 'check_site' %}" id="reload-link">CheckSite</a>
+			<a href="{% url 'black_list' %}" id="reload-link">BlackList</a> 
+			{% if user.is_authenticated %}
+				<a href="{% url 'profile' %}" id="reload-link">Profile</a>
+				<a href="{% url 'feedback' %}" id="reload-link">FeedBack</a> 
+				<p>Welcome, {{ user.first_name }}!</p>
+			{% else %}
+				<button class="btnnn"><a href="{% url 'register' %}" id="reload-link">signup</a></button>
+			{% endif %}
+		</nav>
+		
+    
+    </header>
+
+	<div class="container">
+		<div class="form-container">
+		  <div class="background">
+			<div class="shape"></div>
+			<div class="shape"></div>
+		  </div>
+		  <form method="POST" enctype="multipart/form-data" action="{% url 'update_user_info' %}">
+			{% csrf_token %}
+    		{{ user_form.as_p }}
+			<h3>Edit Profile</h3>
+			<label for="id_user">Username:</label>
+			<input type="text" id="id_user" name="username" value="{{ user_form.username.value }}" required>
+			<label for="id_email">Email:</label>
+			<input type="email" id="id_email" name="email" value="{{ user_form.email.value }}" required>
+			<label for="id_password">New Password:</label>
+			<input type="password" id="id_password" name="new_password">
+			<label for="id_confirm_password">Confirm New Password:</label>
+			<input type="password" id="id_confirm_password" name="confirm_new_password">
+			<label for="id_current_password">Current Password:</label>
+			<input type="password" id="id_current_password" name="current_password">
+			<button type="submit">Save Changes</button>
+			<div class="social">
+			  <div>
+				<i class="fab fa-facebook-f"></i>Facebook
+			  </div>
+			  <div class="fb">
+				<i class="fab fa-twitter"></i>Twitter
+			  </div>
+			</div>
+		  </form>
+		</div>
+	  </div>
+	  
+	  </div>
+	  
+</body>
+</html>

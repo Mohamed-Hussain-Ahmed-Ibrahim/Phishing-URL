@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Url</title>
+    <link rel="stylesheet" href="../../static/css/features2.css">
+</head>
+<body>
+    <header>
+        <h2 class="welcome">welcome {{ user.username }} to feature two</h2>
+        <nav class="navigation">
+            <a href="{% url 'home' %}" id="reload-link">Home</a>
+            <a href="{% url 'check_site' %}" id="reload-link">CheckSite</a>
+            <a href="{% url 'black_list' %}" id="reload-link">BlackList</a> 
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" id="reload-link">Profile</a>
+                <a href="{% url 'feedback' %}" id="reload-link">FeedBack</a> 
+                <p>{{ user.first_name }}!</p>
+            {% else %}
+                <button class="btnnn"><a href="{% url 'register' %}" id="reload-link">signup</a></button>
+            {% endif %}
+        </nav>
+        
+    </header>
+    <br>
+    <h7><ion-icon name="star-outline"></ion-icon>UPload Document<ion-icon name="star-outline"></ion-icon></h7>
+    <br>
+    <section>
+
+        <form action="{% url 'my_view2' %}" method = 'POST' autocomplete="off" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Upload Document</p>
+            <div>
+                <input type="file" id="upload" name = 'file' style="display: none;">
+                <label for="upload">Select Files</label>
+            </div>
+            <button><span>&#8682; Upload </span><span class="uploading">uploading........</span></button>
+            <button class="cancel">Cancel Upload</button>
+            <div class="pr">
+                <strong>
+                    <h4 class="ex">PDF</h4>
+                    <h5 class="size">2.5kb</h5>
+                </strong>
+                <progress min="0" max="100" value="0"></progress>
+                <span class="progress-indicator"></span>
+            </div>
+            <a href="{% url 'my_view1' %}" target="_self" rel="noopener noreferrer">
+                <button type="submit" value="predict">predict</button>
+            </a> 
+        </form>
+    </section>
+    
+    <script src="../../static/js/features2.js"></script>
+    <!-- <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    
+</body>
+</html>

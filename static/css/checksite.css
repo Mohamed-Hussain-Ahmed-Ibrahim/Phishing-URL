@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    background: url('checksite.jpg') no-repeat;
+    width: 200px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+}
+
+
+header
+{
+    top: 0;
+    left: 0;
+    width: 1360px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.welcome
+{
+    font-size: 2.2em;
+    color: yellow;
+    
+}
+.all{
+    display: flex;
+    height: 88%;
+    align-items: center;
+    margin-left: 500px;
+    float: left;
+}
+.bt1{
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 4px 10px;
+    border: 2px solid orangered;
+    background: orangered;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 35px 12px;
+    margin-left: -80px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+.bt1 a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+.bt1 a:hover{
+    text-decoration: none;
+    color: orangered;
+}
+.bt1:hover{
+    background: rgb(250, 227, 97);
+    border: 2px solid rgb(250, 227, 97);
+}
+.bt2{
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 4px 10px;
+    border: 2px solid rgb(34, 128, 3);
+    background: rgb(34, 128, 3);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 35px 12px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+.bt2 a{
+    text-decoration: none;
+    color:white;
+}
+.bt2 a:hover{
+    text-decoration: none;
+    color: rgb(29, 107, 3);
+}
+.bt2:hover{
+    background: rgb(102, 255, 51);
+    border: 2px solid rgb(102, 255, 51);
+}
+.bt3{
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 4px 10px;
+    border: 2px solid rgb(2, 17, 92);
+    background: rgb(2, 17, 92);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 35px 12px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+.bt3 a{
+    text-decoration: none;
+    color:rgb(207, 235, 235);
+}
+.bt3 a:hover{
+    text-decoration: none;
+    color: rgb(40, 10, 101);
+}
+.bt3:hover{
+    background: rgb(19, 154, 184);
+    border: 2px solid rgb(19, 154, 184);
+}
+.bt4{
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+    color: red;
+    font-size: 1.1em;
+    padding: 4px 10px;
+    border: 2px solid rgb(101, 3, 63);
+    background: rgb(101, 3, 63);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 35px 12px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+.bt4 a{
+    text-decoration: none;
+    color:white;
+}
+.bt4 a:hover{
+    text-decoration: none;
+    color: rgb(101, 3, 63);
+}
+.bt4:hover{
+    background: rgb(226, 68, 165);
+    border: 2px solid rgb(226, 68, 165);
+}
+
+
+  
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    transform: scaleX(1);
+
+}
+.navigation .btnnn{
+    position: relative;
+    width:100px;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    background: red;
+    padding-right: 130px;
+    border: 2px solid red;
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500px;
+    transition: .5s;
+    border-radius: 15px;
+
+}
+.navigation .btnnn:hover {
+   
+    background:  rgb(143, 199, 31);
+    border: 2px solid rgb(143, 199, 31);
+    color: rgb(125, 67, 67);
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+

@@ -1,0 +1,9 @@
+const wrapper2 = document.querySelector('.wrapper2');
+const loginlink = document.querySelector('.login_link');
+const registerlink = document.querySelector('.register_link');
+const btnpopup = document.querySelector('.btnnn');
+const iconicClose = document.querySelector('.icon-close');
+registerlink.addEventListener('click', ()=>{wrapper2.classList.add('active');});
+loginlink.addEventListener('click', ()=>{wrapper2.classList.remove('active');});
+btnpopup.addEventListener('click', ()=>{wrapper2.classList.add('active-popup');});
+iconicClose .addEventListener('click', ()=>{wrapper2.classList.remove('active-popup');});

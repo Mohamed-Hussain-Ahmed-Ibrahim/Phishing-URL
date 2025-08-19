@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Url</title>
+    <link rel="stylesheet" href="../../static/css/result.css">
+</head>
+<style>
+    @keyframes anim{
+        100%{
+            stroke-dashoffset: {{predicted_unsafe}};
+        }
+    @keyframes anim1{
+        100%{
+            stroke-dashoffset: {{predicted_safe}};
+        }
+</style>
+<body>
+    <div class="skill">
+        <div class="outer">
+            <div class="inner">
+                <div id="number" data-predicted-safe="{{ predicted_safe }}" data-formatted-safe="{{ formatted_safe }}">
+                    <span id="safePercentage">{{ predicted_safe }}</span>
+                </div>
+            </div>
+        </div>
+        <h1>Safe</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+               </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+    </div>
+    <div class="skilll">
+        <div class="outerr">
+            <div class="innerr">
+                <div id="numberr" data-predicted-unsafe="{{ predicted_unsafe }}" data-formatted-unsafe="{{ formatted_unsafe }}">
+                    <span id="unsafePercentage">{{ predicted_unsafe }}</span>
+                </div>
+            </div>
+        </div>
+        <h2>UnSafe</h2>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+               </linearGradient>
+            </defs>
+            <circle class="sa" cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+    </div>
+    <h7 class="bbbb">if You Want To Continue to This Link Click</h7>
+    <button2 class="sas" type="button"><a href="{{ link }}" target="_blank" class="linkk"><span class="ddd">OK</span></a></button2>
+
+    <script>
+        // Access the predicted safe and unsafe values from the HTML data attributes
+        const predictedSafe = document.getElementById("number").dataset.predictedSafe;
+        const predictedUnsafe = document.getElementById("numberr").dataset.predictedUnsafe;
+
+        // Access the formatted predicted safe and unsafe values from the HTML data attributes
+        const formattedSafe = document.getElementById("number").dataset.formattedSafe;
+        const formattedUnsafe = document.getElementById("numberr").dataset.formattedUnsafe;
+
+        // Update the innerHTML of the divs with the formatted predicted values and their raw probabilities
+        document.getElementById("number").innerHTML = `${formattedSafe} (${predictedSafe})`;
+        document.getElementById("unsafePercentage").innerHTML = `${formattedUnsafe} (${predictedUnsafe})`;
+    </script>
+    
+    
+      
+    
+      
+    
+
+        
+    {% comment %} <script>
+        let number = document.getElementById("number");
+        let counter = 0;
+        setInterval(() =>{
+            let url = 'https://example.com'; // Replace with the actual URL
+            fetch(`/myapp/predict?url=${url}`)
+                .then(response => response.json())
+                .then(data => {
+                    let prediction = data.result;
+                    if (prediction == 'Phishing') {
+                        // Increment the counter for a phishing URL
+                        if(counter < 75){
+                            counter += 1;
+                            number.innerHTML = counter + "%";
+                        }
+                    } else {
+                        // Increment the counter for a safe URL
+                        if(counterr < 25){
+                            counterr += 1;
+                            numberr.innerHTML = counterr + "%";
+                        }
+                    }
+                })
+                .catch(error => console.error(error));
+        }, 20); 
+
+        
+    </script>{% endcomment %}
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</body>
+</html>

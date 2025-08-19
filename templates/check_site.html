@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Url</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/checksite.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="welcome">welcome {{ user.username }} to Phishing site</h2>
+        <p>!</p>
+        <nav class="navigation">
+            <a href="{% url 'home' %}" >Home</a>
+            <a href="{% url 'check_site' %}" id="reload-link">CheckSite</a>
+            <a href="{% url 'black_list' %}" >BlackList</a> 
+            
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" >Profile</a>
+                <a href="{% url 'feedback' %}" >FeedBack</a> 
+            {% else %}
+                <button class="btnnn"><a href="{% url 'register' %}" >signup</a></button>
+            {% endif %}
+            
+        </nav>
+        
+        
+    
+    </header>
+    <div class="all">
+        <button class="bt1"><a href="{% url 'features1' %}">Features 1</a></button>
+        <button class="bt2"><a href="{% url 'features2' %}">Features 2</a></button>
+        <button class="bt3"><a href="{% url 'features3' %}">Features 3</a></button> 
+    </div> 
+    <script>
+        document.getElementById("reload-link").addEventListener("click", function(event) {
+            event.preventDefault();   // Prevent the default link behavior
+            location.reload();        // Reload the current page
+        });
+        </script>
+        <script>
+            document.getElementById("home-link").addEventListener("click", function(event) {
+                event.preventDefault();   // Prevent the default link behavior
+                window.location.href = "/"; // Redirect to the root URL
+            });
+</body>
+</html>    

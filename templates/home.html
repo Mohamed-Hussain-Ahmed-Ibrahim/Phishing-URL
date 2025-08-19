@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Url</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="welcome">Phishing</h2>
+        {% if user.is_authenticated %}
+        <h2 class = "welcome" style="color: blue; border: 6px solid blue;">Welcome, {{ user.username }}!</h2>
+        {% endif %}
+        <nav class="navigation">
+            <a href="{% url 'home' %}" id="reload-link">Home</a>
+            <a href="{% url 'check_site' %}" id="reload-link">CheckSite</a>
+            <a href="{% url 'black_list' %}" id="reload-link">BlackList</a> 
+            
+             
+          
+            {% if user.is_authenticated %}
+              
+              <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <a href="{% url 'feedback' %}" id="reload-link">FeedBack</a>
+                <a href="{% url 'profile' %}" id="reload-link">Profile</a>
+                <button class = "btnnn" type="submit"><a href="{% url 'logout' %}">Logout</a></button>
+              </form>
+            {% else %}
+              <button class="btnnn"><a href="{% url 'register' %}" id="reload-link">signup</a></button>
+            {% endif %}
+          </nav>
+          
+        
+    
+    </header>
+    <div class="row">
+        <div class="col">
+            <h3>Welcome To My Website {{ hello }}</h3>
+            <p>This Page For Detecting Phishing URL if You Want to Know More About This Website</p>
+            <p class="clic">Click<button class="sas" type="button"><a href="https://easydmarc.com/blog/how-to-check-a-link-for-phishing/#:~:text=How%20to%20Check%20a%20Link%20for%20Phishing%201,Up%20to%20Date%20...%207%20Final%20Thoughts%20" target="_blank" class="linkk"><span class="ddd">Learn More</span></a></button></p>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("reload-link").addEventListener("click", function(event) {
+            event.preventDefault();   // Prevent the default link behavior
+            location.reload();        // Reload the current page
+        });
+        </script>
+    <script src="../static/js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+</body>
+</html>

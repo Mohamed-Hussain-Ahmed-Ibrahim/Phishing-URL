@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    
+    /* background: url('background2.png') no-repeat; */
+    background: rgb(134, 150, 6);
+    width: 200px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+}
+header
+{
+    top: 0;
+    left: 0;
+    width: 1360px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+h3{
+    width: 600px;
+    font-size: 2em;
+    color:black;
+    font-weight: bolder;
+    margin-left: 450px;
+    margin-top: 10px;
+    padding: 0px 10px 40px 10px;
+
+
+}
+
+.textareaa{
+    width: 650px;
+    height: 320px;
+    font-size: 1.6em;
+    color:black;
+    margin-left: 370px;
+    background: rgb(217, 188, 194);
+
+
+}
+
+.sasa{
+    width: 110px;
+    background: rgb(192, 10, 10);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    border: 2px solid rgb(192, 10, 10);
+    border-radius: 20px ;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 630px;
+    display: inline-block;
+
+}
+.sasa:hover{
+    background: crimson;
+    color:rgb(238, 227, 229);
+    border: 2px solid crimson;
+
+} 
+.linkk{
+    text-decoration: none;
+}
+.ddd{
+    color: whitesmoke;
+}
+.ddd:hover{
+    color: rgb(231, 224, 34);
+
+}
+
+.welcome
+{
+    font-size: 2.2em;
+    color:aqua;
+    
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    transform: scaleX(1);
+
+}
+.navigation .btnnn{
+    position: relative;
+    width:100px;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    background: rgb(14, 162, 207);
+    padding-right: 130px;
+    border: 2px solid white;
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500px;
+    transition: .5s;
+    border-radius: 15px;
+
+}
+.navigation .btnnn:hover {
+    background: rgb(189, 4, 4);
+    color: rgb(125, 67, 67);
+    text-align: center;
+    border-radius: 15px;
+
+}
+

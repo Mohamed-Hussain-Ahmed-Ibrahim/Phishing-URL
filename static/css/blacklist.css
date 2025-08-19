@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+body{
+    background: url('pexels.jpg') no-repeat;
+    width: 200px;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    
+    
+    
+}
+header
+{
+    top: 0;
+    left: 0;
+    width: 1360px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.mostafa
+{
+    font-size: 3em;
+    color:rgb(4, 4, 92);
+    font-weight: bolder;
+    margin-left: 650px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+
+
+}
+.urll{
+    margin-left: 30px;
+}
+.ssss
+{
+
+    background: 300px 50px white;
+    border: 4px solid rgb(4, 4, 92);
+    background-size: 50px;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    margin-left: -70px;
+    border-radius: 10px;
+
+
+}
+.zzzz
+{
+    background: white;
+    font-size: 10px;
+    width: 150px;
+    height: 30px;
+    color: rgb(59, 4, 88);
+    font-weight: bolder;
+    border: 10px solid rrgb(4, 4, 92)ed;
+    margin-top: -300px;
+    margin-bottom: 300px;
+    border-radius: 10px;
+
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.mostafa a:hover{
+    text-decoration: underline;
+    transform: scaleX(1);
+
+}
+.mostafa .zzzz{
+    background: transparent;
+    border: 2px solid rgb(18, 13, 180);
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: .3em;
+    color: whitesmoke;
+    font-weight: 10px;
+    transition: .5s;
+
+}
+.mostafa .zzzz:hover {
+    background: white;
+    color: red;
+
+}
+
+.welcome
+{
+    font-size: 2.2em;
+    color: rgb(173, 56, 14);
+    
+}
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:hover{
+    text-decoration: underline;
+    transform: scaleX(1);
+
+}
+.navigation .btnnn{
+    position: relative;
+    width:100px;
+    height: 40px;
+    text-align: center;
+    background: transparent;
+    background: orangered;
+    padding-right: 130px;
+    border: 2px solid white;
+    margin-left: 20px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 500px;
+    transition: .5s;
+    border-radius: 15px;
+
+}
+.navigation .btnnn:hover {
+    background: rgb(189, 4, 4);
+    color: rgb(125, 67, 67);
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.btnn{
+    width: 280px;
+    height: 45px;
+    background: rgb(173, 56, 14);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    
+}
+
